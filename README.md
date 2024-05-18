@@ -1,2 +1,5 @@
-# vim
-configurations to use vim
+# nvim
+configurations for nvim
+
+
+
