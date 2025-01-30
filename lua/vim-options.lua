@@ -4,6 +4,10 @@ vim.cmd("set softtabstop=2")
 vim.cmd("set shiftwidth=2")
 vim.g.background = "light"
 
+local home = os.getenv("HOME")
+if (home == nil) then
+    home= os.getenv("UserProfile")
+end
 
 --nvim options
 vim.opt.swapfile = false
@@ -23,7 +27,7 @@ vim.opt.isfname:append("@-@")
 
 vim.opt.swapfile = false
 vim.opt.backup = false
-vim.opt.undodir = os.getenv("HOME") .. "/.nvim/undodir"
+vim.fn.expand('~/.vim/undodir')
 vim.opt.undofile = true
 
 vim.opt.updatetime = 50
